@@ -49,7 +49,7 @@ class WelcomeMod(loader.Module):
                     # if uid in admin_ids:
                     #     return
                     # else:
-                    await message.respond(f"/mute 1h {str(uid)} AFK")
+                    await message.respond(f"/mute {str(uid)} 1h AFK")
 
         if ('гнетущей' in message.raw_text.split()) or ('убежал' in message.raw_text.split()):
             msgs = []
