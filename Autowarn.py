@@ -5,7 +5,7 @@ from telethon.tl.types import TypeChannelParticipantsFilter, ChannelParticipants
 
 
 class WelcomeMod(loader.Module):
-    """Автоварн юзеров за Leave/AFK с использованием Lucifer bot"""
+    """Автоварн юзеров за Leave/AFK с использованием Group Help"""
     strings = {'name': 'AutoWarn'}
 
     async def client_ready(self, client, db):
@@ -49,7 +49,7 @@ class WelcomeMod(loader.Module):
                     # if uid in admin_ids:
                     #     return
                     # else:
-                    await message.respond(f".warn {str(uid)} AFK")
+                    await message.respond(f"/mute 1h {str(uid)} AFK")
 
         if ('гнетущей' in message.raw_text.split()) or ('убежал' in message.raw_text.split()):
             msgs = []
@@ -65,4 +65,4 @@ class WelcomeMod(loader.Module):
                 for usr in message.entities:
                     if hasattr(usr, 'user_id'):
                         uid = usr.user_id
-                        await message.respond(f".warn {str(uid)} Лив из игры")
+                        await message.respond(f"\warn {str(uid)} Лив из игры")
