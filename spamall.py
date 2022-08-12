@@ -1,4 +1,4 @@
-#CLOWN DESIGN HAHA
+
 from .. import loader, utils
 import telethon
 from telethon import events
