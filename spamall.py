@@ -41,6 +41,6 @@ class SpamAllMod(loader.Module):
                     else:
                         await message.client.send_message(str(user.username), args)
                 except:
-                    await sleep(0.1)
+                    await sleep(0.33)
 
 
